@@ -54,4 +54,4 @@ dkms.conf
 tmp*
 *.s
 9cc
-
+.vagrant
