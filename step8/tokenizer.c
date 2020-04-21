@@ -30,8 +30,7 @@ void error_tok(Token *tok, char *fmt, ...)
 {
   va_list ap;
   va_start(ap, fmt);
-  // error_at(tok->str, fmt, ap);
-  error(fmt);
+  error_at(tok->str, tok->str, fmt, ap); // FIXME
 }
 
 // Consumes the current token if it matches `op`.
