@@ -40,6 +40,15 @@ bool equal(Token *tok, char *op)
   return strlen(op) == tok->len && !strncmp(tok->str, op, tok->len);
 }
 
+void print_token(Token *token)
+{
+  printf("%d", token->kind);
+  if (token->kind != TK_EOF)
+    print_token(token->next);
+  else
+    printf("\n");
+}
+
 // Ensure that the current token is `op`.
 Token *skip(Token *tok, char *op)
 {

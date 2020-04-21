@@ -25,6 +25,8 @@ struct Token
   int len;        // トークンの長さ
 };
 
+void print_token(Token *token);
+
 // 抽象構文木のノードの種類
 typedef enum
 {
